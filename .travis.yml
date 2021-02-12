@@ -2,10 +2,11 @@ dist: xenial
 
 services:
   - postgresql
-env:
-  -POSTGRES_VERSION=9.4
-addons:
-  postgresql: $POSTGRESQL_VERSION
+include:
+  - addons:
+    postgresql: "9.4"
+  - addons:
+    postgresql: "9.6"
 before_script:
   - psql -U postgres -c "create user decide password 'decide'"
   - psql -U postgres -c "create database test_decide owner decide"
