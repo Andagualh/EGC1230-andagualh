@@ -73,7 +73,7 @@ MODULES = [
     'voting',
 ]
 
-BASEURL = 'http://localhost:8000'
+BASEURL = 'https://egc1230-andagualh.herokuapp.com
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
